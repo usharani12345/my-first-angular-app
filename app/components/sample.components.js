@@ -10,18 +10,30 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var AppComponent = (function () {
-    function AppComponent() {
-        this.dispalyValue = true;
+var SampleComponent = (function () {
+    function SampleComponent() {
+        this.name = "usha",
+            this.imageUrl = './app/components/images/Fall-Nature-Background-Pictures.jpg';
+        this.realName = "usha";
+        this.showHeader = true;
+        this.price = 1500;
+        this.items = ["fridge", "ac", "oven", "washing machine", "cooler"];
     }
-    return AppComponent;
+    SampleComponent.prototype.runMe = function (name) {
+        console.log("im clicking the button: : : " + name);
+    };
+    SampleComponent.prototype.display = function (events) {
+        console.log(events.target.value);
+    };
+    return SampleComponent;
 }());
-AppComponent = __decorate([
+SampleComponent = __decorate([
     core_1.Component({
-        selector: 'my-app',
-        template: "<div *ngIf=\"dispalyValue\"><h1>my angular app</h1>\n\t<my-home></my-home>\n\t<about></about>\n\t<my-sample></my-sample>\n\t\t\t  </div>"
+        moduleId: module.id,
+        selector: "my-sample",
+        templateUrl: "sample.html"
     }),
     __metadata("design:paramtypes", [])
-], AppComponent);
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+], SampleComponent);
+exports.SampleComponent = SampleComponent;
+//# sourceMappingURL=sample.components.js.map
